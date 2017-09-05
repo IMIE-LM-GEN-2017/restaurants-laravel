@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-    @component('elements.public-menu')
+    @component('elements.navbar')
     @endcomponent
 
     @if (session('status'))
