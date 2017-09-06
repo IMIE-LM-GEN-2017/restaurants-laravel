@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pour les gourmands</title>
+@extends('template.default')
+@section('title', 'Restaurants')
 
-    <meta charset="utf-8">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="bootstrap.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="css/lesrestos.css" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <a><input href="Index.html"class="btnA btn-default "  type="button" value="Accueil"/></a>
-
-    <h1> Les restaurants</h1>
-
-
+@section('content')
     <div class="vignettes">
 
         <div class="card-group">
@@ -127,7 +113,4 @@
             </div>
         </div>
     </div>
-    </body>
-
-
-</html>
+@endsection

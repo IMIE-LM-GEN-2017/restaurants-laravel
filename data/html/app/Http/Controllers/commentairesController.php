@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 
-class commentairesController extends Controller
+class restaurants extends Model
 {
-    //
+    protected $fillable = ['id', 'commentaires', 'date_commentaires','notes','id_clients'];
+
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }

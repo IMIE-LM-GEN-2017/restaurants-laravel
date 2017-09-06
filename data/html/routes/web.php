@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PagesController@home')->name('homesdfsdf');
+Route::get('/', 'PagesController@home')->name('home');
 
 
 
@@ -26,50 +26,53 @@ Route::get('/', 'PagesController@home')->name('homesdfsdf');
 |
 */
 
-Route::get('/restaurants', 'restaurantController@index')->name('restoIndex');
-Route::get('/restaurant/{id}', 'restaurantController@show')->name('restoShow');
 
-Route::get('/clients', 'clientController@index')->name('clientIndex');
-Route::get('/client/{id}', 'clientController@show')->name('clientShow');
+Route::get('/restaurants', 'restaurantsController@index')->name('RestoIndex');
+Route::get('/restaurants/{id}', 'restaurantsController@show')->name('RestoShow');
 
-Route::get('/reservations', 'reservationController@index')->name('reservationIndex');
-Route::get('/reservation/{id}', 'reservationController@show')->name('reservationShow');
+Route::get('/clients', 'clientsController@index')->name('CliIndex');
+Route::get('/clients/{id}', 'clientsController@show')->name('CliShow');
 
-Route::get('/commentaires', 'commentaireController@index')->name('commentaireIndex');
-Route::get('/commentaire/{id}', 'commentaireController@show')->name('commentaireShow');
+Route::get('/reservations', 'reservationsController@index')->name('ResIndex');
+Route::get('/reservations/{id}', 'reservationsController@show')->name('ResShow');
+
+Route::get('/commentaires', 'commentairesController@index')->name('ComIndex');
+Route::get('/commentaires/{id}', 'commentairesController@show')->name('ComShow');
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'can:access-admin'], function () {
-    Route::get('/clients', 'Admin\clientController@index')->name('AdminclientIndex');
-    Route::get('/client/{id}', 'Admin\clientController@show')->name('AdminclientShow');
-    Route::get('/client/{id}/edit', 'Admin\clientController@edit')->name('AdminclientEdit');
-    Route::commentaire('/client/{id}/update', 'Admin\clientController@update')->name('AdminclientUpdate');
-    Route::get('/client/{id}/destroy', 'Admin\clientController@destroy')->name('AdminclientDestroy');
-    Route::get('/dashboard', 'Admin\clientController@dashboard')->name('AdminclientDashboard');
+    Route::get('/clients', 'Admin\clientsController@index')->name('AdminCliIndex');
+    Route::get('/clients/{id}', 'Admin\clientsController@show')->name('AdminClisShow');
+    Route::get('/clients/{id}/edit', 'Admin\clientsController@edit')->name('AdminCliEdit');
+    Route::post('/clients/{id}/update', 'Admin\clientsController@update')->name('AdminCliUpdate');
+    Route::get('/clients/{id}/destroy', 'Admin\clientsController@destroy')->name('AdminCliDestroy');
+    Route::get('/dashboard', 'Admin\clientsController@dashboard')->name('AdminCliDashboard');
 
-    Route::get('/restaurants', 'Admin\restaurantController@index')->name('AdminrestoIndex');
-    Route::get('/restaurant/create', 'Admin\restaurantController@create')->name('AdminrestoCreate');
-    Route::commentaire('/restaurant/store', 'Admin\restaurantController@store')->name('AdminrestoStore');
-    Route::get('/restaurant/{id}', 'Admin\restaurantController@show')->name('AdminrestoShow');
-    Route::get('/restaurant/{id}/edit', 'Admin\restaurantController@edit')->name('AdminrestoEdit');
-    Route::commentaire('/restaurant/{id}/update', 'Admin\restaurantController@update')->name('AdminrestoUpdate');
-    Route::get('/restaurant/{id}/destroy', 'Admin\restaurantController@destroy')->name('AdminrestoDestroy');
+    Route::get('/restaurants', 'Admin\restaurantsController@index')->name('AdminRestoIndex');
+    Route::get('/restaurants/create', 'Admin\restaurantsController@create')->name('AdminRestoCreate');
+    Route::post('/restaurants/store', 'Admin\restaurantsController@store')->name('AdminRestoStore');
+    Route::get('/restaurants/{id}', 'Admin\restaurantsController@show')->name('AdminRestoShow');
+    Route::get('/restaurants/{id}/edit', 'Admin\restaurantsController@edit')->name('AdminRestoEdit');
+    Route::post('/restaurants/{id}/update', 'Admin\restaurantsController@update')->name('AdminRestoUpdate');
+    Route::get('/restaurants/{id}/destroy', 'Admin\restaurantsController@destroy')->name('AdminRestoDestroy');
 
-    Route::get('/reservations', 'Admin\reservationController@index')->name('AdminreservationIndex');
-    Route::get('/reservation/create', 'Admin\reservationController@create')->name('AdminreservationCreate');
-    Route::commentaire('/reservation/store', 'Admin\reservationController@store')->name('AdminreservationStore');
-    Route::get('/reservation/{id}', 'Admin\reservationController@show')->name('AdminreservationShow');
-    Route::get('/reservation/{id}/edit', 'Admin\reservationController@edit')->name('AdminreservationEdit');
-    Route::commentaire('/reservation/{id}/update', 'Admin\reservationController@update')->name('AdminreservationUpdate');
-    Route::get('/reservation/{id}/destroy', 'Admin\reservationController@destroy')->name('AdminreservationDestroy');
+    Route::get('/reservations', 'Admin\reservationsController@index')->name('AdminResIndex');
+    Route::get('/reservations/create', 'Admin\reservationsController@create')->name('AdminResCreate');
+    Route::post('/reservations/store', 'Admin\reservationsController@store')->name('AdminResStore');
+    Route::get('/reservations/{id}', 'Admin\reservationsController@show')->name('AdminResShow');
+    Route::get('/reservations/{id}/edit', 'Admin\reservationsController@edit')->name('AdminResEdit');
+    Route::post('/reservations/{id}/update', 'Admin\reservationsController@update')->name('AdminResUpdate');
+    Route::get('/reservations/{id}/destroy', 'Admin\reservationsController@destroy')->name('AdminResDestroy');
 
-    Route::get('/commentaires', 'Admin\commentaireController@index')->name('AdmincommentaireIndex');
-    Route::get('/commentaire/create', 'Admin\commentaireController@create')->name('AdmincommentaireCreate');
-    Route::commentaire('/commentaire/store', 'Admin\commentaireController@store')->name('AdmincommentaireStore');
-    Route::get('/commentaire/{id}', 'Admin\commentaireController@show')->name('AdmincommentaireShow');
-    Route::get('/commentaire/{id}/edit', 'Admin\commentaireController@edit')->name('AdmincommentaireEdit');
-    Route::commentaire('/commentaire/{id}/update', 'Admin\commentaireController@update')->name('AdmincommentaireUpdate');
-    Route::get('/commentaire/{id}/destroy', 'Admin\commentaireController@destroy')->name('AdmincommentaireDestroy');
+    Route::get('/commentaires', 'Admin\commentairesController@index')->name('AdminComIndex');
+    Route::get('/commentaires/create', 'Admin\commentairesController@create')->name('AdminComCreate');
+    Route::post('/commentaires/store', 'Admin\commentairesController@store')->name('AdminComStore');
+    Route::get('/commentaires/{id}', 'Admin\commentairesController@show')->name('AdminComShow');
+    Route::get('/commentaires/{id}/edit', 'Admin\commentairesController@edit')->name('AdminComEdit');
+    Route::post('/commentaires/{id}/update', 'Admin\commentairesController@update')->name('AdminComUpdate');
+    Route::get('/commentaires/{id}/destroy', 'Admin\commentairesController@destroy')->name('AdminComDestroy');
+
+    Route::post('/contacts', 'ContactController@send')->name('contact');
 });
 
 Auth::routes();

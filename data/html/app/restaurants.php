@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class restaurants extends Model
 {
-    protected $fillable = ['id', 'nom', 'prenom','adresse','cp','ville','date_de_naissance','mail','tel','date_inscription','mot_de_passe','session','id_reservation'];
+    protected $fillable = ['id', 'nom', 'adresse','cp','ville','tel','description','dateouverture','datemiseàjour','id_commentaires'];
 
     public function posts(){
         return $this->hasMany('App\Post');
