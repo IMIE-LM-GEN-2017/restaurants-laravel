@@ -39,6 +39,9 @@ Route::get('/reservations/{id}', 'reservationsController@show')->name('ResShow')
 Route::get('/commentaires', 'commentairesController@index')->name('ComIndex');
 Route::get('/commentaires/{id}', 'commentairesController@show')->name('ComShow');
 
+Route::get('/la_plancha_gourmande', 'la_plancha_gourmandeController@index')->name('LPGIndex');
+Route::get('/la_plancha_gourmande/{id}', 'la_plancha_gourmandeController@show')->name('LPGShow');
+
 
 Route::group(['prefix' => 'admin', 'middleware' => 'can:access-admin'], function () {
     Route::get('/clients', 'Admin\clientsController@index')->name('AdminCliIndex');
@@ -48,13 +51,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'can:access-admin'], function
     Route::get('/clients/{id}/destroy', 'Admin\clientsController@destroy')->name('AdminCliDestroy');
     Route::get('/dashboard', 'Admin\clientsController@dashboard')->name('AdminCliDashboard');
 
-    Route::get('/restaurants', 'Admin\restaurantsController@index')->name('AdminRestoIndex');
-    Route::get('/restaurants/create', 'Admin\restaurantsController@create')->name('AdminRestoCreate');
-    Route::post('/restaurants/store', 'Admin\restaurantsController@store')->name('AdminRestoStore');
-    Route::get('/restaurants/{id}', 'Admin\restaurantsController@show')->name('AdminRestoShow');
-    Route::get('/restaurants/{id}/edit', 'Admin\restaurantsController@edit')->name('AdminRestoEdit');
-    Route::post('/restaurants/{id}/update', 'Admin\restaurantsController@update')->name('AdminRestoUpdate');
-    Route::get('/restaurants/{id}/destroy', 'Admin\restaurantsController@destroy')->name('AdminRestoDestroy');
+    Route::get('/restaurants', 'Admin\la_plancha_gourmandeController@index')->name('AdminRestoIndex');
+    
+    
+    Route::get('/la_plancha_gourmande/create', 'Admin\la_plancha_gourmandeController@create')->name('AdminLPGCreate');
+    Route::post('/la_plancha_gourmande/store', 'Admin\la_plancha_gourmandeController@store')->name('AdminLPGStore');
+    Route::get('/la_plancha_gourmande/{id}', 'Admin\la_plancha_gourmandeController@show')->name('AdminLPGShow');
+    Route::get('/la_plancha_gourmande/{id}/edit', 'Admin\la_plancha_gourmandeController@edit')->name('AdminLPGEdit');
+    Route::post('/la_plancha_gourmande/{id}/update', 'Admin\la_plancha_gourmandeController@update')->name('AdminLPGUpdate');
+    Route::get('/la_plancha_gourmande/{id}/destroy', 'Admin\la_plancha_gourmandeController@destroy')->name('AdminLPGDestroy');
 
     Route::get('/reservations', 'Admin\reservationsController@index')->name('AdminResIndex');
     Route::get('/reservations/create', 'Admin\reservationsController@create')->name('AdminResCreate');

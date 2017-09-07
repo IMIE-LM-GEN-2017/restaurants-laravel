@@ -55,8 +55,8 @@
                 <div class="card-body">
                     <h4 class="card-title">La Fontaine des Saveurs</h4>
                     <p class="card-text">Restaurant.</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
-                </div>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('LPGIndex') }}">Cliquez ici!</a></small></p>
+                </div>a
             </div>
             <div class="card">
                 <img class="card-img-top" src="http://www.expertizia.com/wp-content/uploads/2014/08/comptabilite-hotellerie-restauration-expert-comptable-a-le-bourget.jpg" alt="Card image cap">
@@ -92,7 +92,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Le lisboa</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-default">Cliquez ici!</button></small></p>
                 </div>
             </div>
             <div class="card">

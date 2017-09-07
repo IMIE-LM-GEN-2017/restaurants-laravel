@@ -1,33 +1,7 @@
 @extends('template.default')
-@extends('elements.navbar')
+@section('title', 'Pour les Gourmands')
 
-
-        <!DOCTYPE html>
-<html>
-<head>
-    <title>Pour les gourmands</title>
-
-    <meta charset="utf-8">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="bootstrap.css" media="screen,projection"/>
-    <link rel="stylesheet" href="css/welcome.css"/>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-
-    <h1>Pour les gourmands!</h1>
-
-
-</head>
-
-
-</br>
-</br>
-
-<body>
-
-
+@section('content')
 
 
     <div class="row">
@@ -84,4 +58,5 @@
 
         </div>
 
-
+    </div>
+@endsection

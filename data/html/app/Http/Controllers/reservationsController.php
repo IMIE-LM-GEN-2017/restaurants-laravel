@@ -1,13 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Http\Controllers;
 
-use Illuminate\Database\Eloquent\Model;
 
-class restaurants extends Model
+use App\reservations;
+use Illuminate\Http\Request;
+
+class reservationsController extends Controller
 {
-    protected $fillable = ['id', 'id_restaurants', 'id_commentaires'];
-    public function posts(){
-        return $this->hasMany('App\Post');
+    public function index(){
+        $restaurants=reservations::all();
+        return view('reservations.index',['reservations'=>$restaurants]);
     }
 }

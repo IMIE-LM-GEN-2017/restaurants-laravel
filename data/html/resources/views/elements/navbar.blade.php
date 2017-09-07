@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Pour les Gourmands</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,16 +13,12 @@
                 <a class="nav-link" href="{{ route('RestoIndex') }}">restaurants</a>
             </li>
             <li class="nav-item">
-
-                @if(Auth::guest())
-                    <a class="navbar-item " href="{{ route('login') }}">
-                        Login
-                    </a>
+                <a class="nav-link" href="{{ route('RestoIndex') }}">
+                    @if(Auth::guest())
+                    login</a>
             </li>
             <li class="nav-item">
-                <a class="navbar-item " href="{{ route('register') }}">
-                    Inscritpion
-                </a>
+                <a class="nav-link" href="{{ route('RestoIndex') }}">inscription</a>
             </li>
             <li>
                 @else
@@ -39,6 +29,8 @@
                     </a>
 
             </li>
+
+
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
