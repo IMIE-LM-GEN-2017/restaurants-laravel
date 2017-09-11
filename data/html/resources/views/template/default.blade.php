@@ -32,6 +32,7 @@
             margin-right: 100px;
             opacity: 0.8;
         }
+
         .card {
             width:250px;
             height:400px;
