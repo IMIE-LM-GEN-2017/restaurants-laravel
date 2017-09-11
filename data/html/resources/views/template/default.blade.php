@@ -124,6 +124,11 @@
         }
 
     });
+
+
+
 </script>
+@component('elements.footer')
+@endcomponent
 </body>
 </html>
