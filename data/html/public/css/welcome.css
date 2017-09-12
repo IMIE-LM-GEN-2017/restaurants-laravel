@@ -7,32 +7,15 @@ h1 {
     color:#FFFFFF;
 }
 
-.btnA1 btn-default {
-    font-family: Gabriola, "Gentium Basic", Georgia;
-}
 
 
 
-/*boutons*/
-
-.btnA1{
-    float:right;
-    background-color:rgba(37,38,48);
-    color: white;
-    font-size: 20px;
-    opacity: 0.9;
-    border:none;
-}
-
-#login{
-    float: right;
-}
 
 
-#contenu{
-    margin-left: 1400px;
 
-}
+
+
+
 
 
 
@@ -80,6 +63,3 @@ head {
 p{
     font-size:30px;
 }
-
-
-

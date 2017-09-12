@@ -4,15 +4,65 @@
 <html>
 <head>
     <title>Pour les Gourmands - @yield('title')</title>
+    <link rel="stylesheet" href="css/welcome.css"/>
 
-    <link rel="stylesheet" href="css/view.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="bootstrap.css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
     <!-- Add the CSRF token in a meta tag to have it easily in JS -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <style>
+        /*css*/
+        body { font-family: Gabriola, "Gentium Basic", Georgia;
+            font-size: 20px;
+            color:white;
+            background-image:url(http://www.wallpapers-mania.org/images/Deco/fond-page-web-planches-noires-verticales.jpg);
+            background-attachment:fixed;
+            background-repeat:no-repeat;
+        }
+
+        h1{
+            font-size: 100px;
+            text-align: center;
+        }
+        .vignettes{
+            background-color: dimgray;
+            margin-left: 100px;
+            margin-right: 100px;
+            opacity: 0.8;
+        }
+
+        .card {
+            width:250px;
+            height:400px;
+            margin:auto;
+            text-align:center;
+            border: 1px rgba(255,255,255) solid;
+            background-color: white;
+        }
+
+        .card-img-top{
+            height: 200px;
+            width:200px;
+        }
+
+        .card-group{
+            display: flex;
+
+        }
+
+        .card-body{
+            color:black;
+
+        }
+    </style>
+
 </head>
 <body>
 <div class="container">
-    @component('elements.public-menu')
+
+    @component('elements.navbar')
     @endcomponent
 
     @if (session('status'))
@@ -74,6 +124,11 @@
         }
 
     });
+
+
+
 </script>
+@component('elements.footer')
+@endcomponent
 </body>
 </html>
