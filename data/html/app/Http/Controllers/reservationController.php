@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use App\reservations;
 use Illuminate\Http\Request;
 
-class reservationsController extends Controller
+class reservationController extends Controller
 {
     public function index(){
         $restaurants=reservations::all();

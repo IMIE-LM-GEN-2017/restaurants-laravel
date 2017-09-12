@@ -1,4 +1,5 @@
 @extends('template.default')
+
 @section('title', 'Pour les Gourmands')
 
 @section('content')

@@ -8,7 +8,6 @@ class restaurants extends Model
 {
     protected $fillable = ['id', 'nom', 'adresse','cp','ville','tel','description','dateouverture','datemiseàjour','id_commentaires'];
 
-    public function posts(){
-        return $this->hasMany('App\Post');
-    }
+
+
 }

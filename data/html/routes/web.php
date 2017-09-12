@@ -27,14 +27,14 @@ Route::get('/', 'PagesController@home')->name('home');
 */
 /*Pages principales*/
 
-Route::get('/restaurants', 'restaurantsController@index')->name('RestoIndex');
-Route::get('/restaurants/{id}', 'restaurantsController@show')->name('RestoShow');
+Route::get('/restaurants', 'restaurantController@index')->name('RestoIndex');
+Route::get('/restaurants/{id}', 'restaurantController@show')->name('RestoShow');
 
-Route::get('/clients', 'clientsController@index')->name('CliIndex');
-Route::get('/clients/{id}', 'clientsController@show')->name('CliShow');
+Route::get('/clients', 'clientController@index')->name('CliIndex');
+Route::get('/clients/{id}', 'clientController@show')->name('CliShow');
 
-Route::get('/reservations', 'reservationsController@index')->name('ResIndex');
-Route::get('/reservations/{id}', 'reservationsController@show')->name('ResShow');
+Route::get('/reservations', 'reservationController@index')->name('ResIndex');
+Route::get('/reservations/{id}', 'reservationController@show')->name('ResShow');
 
 Route::get('/commentaires', 'commentairesController@index')->name('ComIndex');
 Route::get('/commentaires/{id}', 'commentairesController@show')->name('ComShow');
