@@ -1,14 +1,10 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Pour les gourmands</title>
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="bootstrap.css" media="screen,projection"/>
-    <link rel="stylesheet" href="fontaine.css" />
+
 </head>
 <body>
 <div id = "photo1">
@@ -19,15 +15,15 @@
 <table id ="tableau">
     <table>
         <tr>
-            <th><div class P>Adresse</th></div>
-            <th><div class P>Tél </th></div>
-            <th><div class P>Horaires</th></div>
-            <th><div class P>Fréquentation</th></div>
+            <th><div class P>Adresse</div></th>
+            <th><div class P>Tél </div></th>
+            <th><div class P>Horaires</div></th>
+            <th><div class P>Fréquentation</div></th>
         </tr>
         <tr>
-            <td><div class=M>489 Avenue Bollee <br/> 72000 Le Mans</td></div></td>
-            <td><div class=M> 02 43 85 25 73</td></td></div>
-            <td><div class=M>non renseigné</td></td></div>
+            <td><div class=M>489 Avenue Bollee <br/> 72000 Le Mans</div></td>
+            <td><div class=M> 02 43 85 25 73</div></td>
+            <td><div class=M>non renseigné</div></td>
             <td>             </td></td>
         </tr>
         <tr>
@@ -35,9 +31,9 @@
             <th><br/>transport</th>
             <th><br/>carte</th>
         </tr>
-        <td><div class=M>non renseigné </td></div></td>
-        <td><div class=M> non renseigné</td></td></div>
-        <td><div class=M>non renseigné</td></td></div>
+        <td><div class=M>non renseigné </div></td>
+        <td><div class=M> non renseigné</div></td>
+        <td><div class=M>non renseigné </div></td>
 
         </tr>
     </table>
@@ -80,12 +76,11 @@
                   rows="5"></textarea>
         <br/>
 
-        <input type="submit" value="Envoyer>
+        <input type="submit" value="Envoyer">
 
 
 
 </div>
-      </div>
 
 
 

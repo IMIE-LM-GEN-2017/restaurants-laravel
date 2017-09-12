@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h4 class="card-title">La Plancha Gourmande</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('PlanchaIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
             <div class="card">
@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Le Nez Rouge</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('NezIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
             <div class="card">
@@ -26,7 +26,7 @@
                 <div class="card-body">
                     <h4 class="card-title">La Vieille Porte</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('VPorteIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
             <div class="card">
@@ -34,7 +34,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Le Grenier à Sel</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('GrenierIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Le Parvis Saint Hilaire</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('ParvisIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
             <div class="card">
@@ -55,7 +55,7 @@
                 <div class="card-body">
                     <h4 class="card-title">La Fontaine des Saveurs</h4>
                     <p class="card-text">Restaurant.</p>
-                    <p class="card-text"><small ><a class="nav-link" href="{{ route('LPGIndex') }}">Cliquez ici!</a></small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('FontaineIndex') }}">Cliquez ici!</a></small></p>
                 </div>a
             </div>
             <div class="card">
@@ -63,7 +63,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Auberge de Bagatelle</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('BagatelleIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
             <div class="card">
@@ -71,7 +71,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Le Tablier de Jaurès</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('JauresIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Le Bellifontain</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('BelliIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
             <div class="card">
@@ -100,7 +100,7 @@
                 <div class="card-body">
                     <h4 class="card-title">L'un des Sens</h4>
                     <p class="card-text">Bar à vins. </p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('SensIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
             <div class="card">
@@ -108,7 +108,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Le Bistrot Des Gourmets</h4>
                     <p class="card-text">restaurant</p>
-                    <p class="card-text"><small class="text-muted">Cliquez ici!</small></p>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('BistrotIndex') }}">Cliquez ici!</a></small></p>
                 </div>
             </div>
         </div>
