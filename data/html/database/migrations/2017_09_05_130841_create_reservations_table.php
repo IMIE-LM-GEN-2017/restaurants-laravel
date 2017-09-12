@@ -15,8 +15,14 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreign('id_restaurants')->references('id')->on('restaurants');
-            $table->foreign('id_commentaires')->references('id')->on('commentaires');
+            // Champs
+            $table->integer('restaurant_id')->unsigned();
+            $table->integer('commentaire_id')->unsigned();
+            $table->integer('client_id')->unsigned();
+            // Lien
+            $table->foreign('restaurant_id')->references('id')->on('restaurants');
+            $table->foreign('commentaire_id')->references('id')->on('commentaires');
+            $table->foreign('client_id')->references('id')->on('clients');
 
         });
     }

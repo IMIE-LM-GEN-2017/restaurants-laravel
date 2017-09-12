@@ -18,15 +18,13 @@ class CreateClientsTable extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('adresse');
-            $table->string('ville');
+            $table->string('ville')->nullable();
             $table->integer('cp');
             $table->date('date_de_naissance');
             $table->string('mail')->unique();
             $table->string('tel');
-            $table->date('date_inscription');
-            $table->string('mot_de_passe')->unique();
-            $table->string('session');
-            $table->foreign('id_reservation');
+            $table->string('password');
+            $table->timestamps();
         });
     }
 

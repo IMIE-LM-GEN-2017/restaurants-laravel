@@ -22,9 +22,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('tel');
             $table->string('description');
             $table->date('dateouverture');
-            $table->date('datemiseàjour');
-            $table->foreign('id_commentaires')->references('id')->on('commentaires');
-
+            $table->timestamps();
         });
     }
 
