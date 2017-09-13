@@ -25,6 +25,7 @@ class CreateClientsTable extends Migration
             $table->string('tel');
             $table->string('password');
             $table->timestamps();
+
         });
     }
 

@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class commentaires extends Model
 {
-    protected $fillable = ['id', 'commentaires', 'dates_commentaires','notes','id_clients'];
+    protected $fillable = ['id', 'commentaire', 'note','created_at', 'updated_at','clients_id'];
+
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }

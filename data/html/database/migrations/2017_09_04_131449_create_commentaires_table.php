@@ -18,8 +18,8 @@ class CreateCommentairesTable extends Migration
             $table->text('commentaire');
             $table->integer('note');
             $table->timestamps();
-            $table->integer('client_id')->unsigned();
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->integer('clients_id')->unsigned();
+            $table->foreign('clients_id')->references('id')->on('clients');
         });
     }
 
