@@ -13,12 +13,12 @@
                 <a class="nav-link" href="{{ route('RestoIndex') }}">restaurants</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('RestoIndex') }}">
+                <a class="nav-link" href="{{ route('login') }}">
                     @if(Auth::guest())
                     login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('RestoIndex') }}">inscription</a>
+                <a class="nav-link" href="{{ route('register') }}">inscription</a>
             </li>
             <li>
                 @else

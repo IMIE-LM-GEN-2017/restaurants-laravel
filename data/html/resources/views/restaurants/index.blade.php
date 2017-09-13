@@ -1,5 +1,5 @@
 @extends('template.default')
-@section('title', 'restaurant')
+@section('title', 'Restaurants')
 
 @section('content')
     <div class="vignettes">
@@ -10,7 +10,8 @@
                 <div class="card-body">
                     <h4 class="card-title">La Plancha Gourmande</h4>
                     <p class="card-text">Restaurant</p>
-                    <p class="card-text"><small ><a class="nav-link" href="{{ route('PlanchaIndex') }}">Cliquez ici!</a></small></p>                </div>
+                    <p class="card-text"><small ><a class="nav-link" href="{{ route('PlanchaIndex') }}">Cliquez ici!</a></small></p>
+                </div>
             </div>
             <div class="card">
                 <img class="card-img-top" src="http://www.le-train-bleu.com/maj/images_resized/930-so-restaurant-so-2014-photo-background03-fr.jpg" alt="Card image cap">
