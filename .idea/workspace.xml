@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142797e9-2c06-4a7d-9baa-39e72f470277" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/AubergeDeBagatelle/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/Bellifontain/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/BistrotDesGourmets/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/GrenierASel/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/Lisboa/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/NezRouge/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/ParvisSaintHilaire/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/PlanchaGourmande/create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/PlanchaGourmande/edit.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/PlanchaGourmande/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/PlanchaGourmande/show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/TablierDeJaures/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/UnDesSens/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/html/resources/views/VieillePorte/index.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/app/clients.php" afterPath="$PROJECT_DIR$/data/html/app/clients.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/app/commentaires.php" afterPath="$PROJECT_DIR$/data/html/app/commentaires.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/app/reservations.php" afterPath="$PROJECT_DIR$/data/html/app/reservations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/app/restaurants.php" afterPath="$PROJECT_DIR$/data/html/app/restaurants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/database/migrations/2017_09_03_131520_create_clients_table.php" afterPath="$PROJECT_DIR$/data/html/database/migrations/2017_09_03_131520_create_clients_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/database/migrations/2017_09_04_131449_create_commentaires_table.php" afterPath="$PROJECT_DIR$/data/html/database/migrations/2017_09_04_131449_create_commentaires_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/database/migrations/2017_09_05_130841_create_reservations_table.php" afterPath="$PROJECT_DIR$/data/html/database/migrations/2017_09_05_130841_create_reservations_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/app/Providers/AuthServiceProvider.php" afterPath="$PROJECT_DIR$/data/html/app/Providers/AuthServiceProvider.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/data/html/resources/views/auth/login.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/resources/views/auth/passwords/email.blade.php" afterPath="$PROJECT_DIR$/data/html/resources/views/auth/passwords/email.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/html/resources/views/auth/passwords/reset.blade.php" afterPath="$PROJECT_DIR$/data/html/resources/views/auth/passwords/reset.blade.php" />
@@ -75,51 +54,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017_09_04_131449_create_commentaires_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_04_131449_create_commentaires_table.php">
+      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="777">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017_09_05_130742_create_restaurants_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_05_130742_create_restaurants_table.php">
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/register.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reset.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/passwords/reset.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017_09_05_130841_create_reservations_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_05_130841_create_reservations_table.php">
+      <file leaf-file-name="email.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/passwords/email.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017_09_13_075148_rename_tables.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_13_075148_rename_tables.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017_09_03_131520_create_clients_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_03_131520_create_clients_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -179,16 +148,17 @@
         <option value="$PROJECT_DIR$/data/html/resources/views/clients/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/data/html/routes/web.php" />
         <option value="$PROJECT_DIR$/data/html/app/restaurants.php" />
-        <option value="$PROJECT_DIR$/data/html/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/data/html/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/data/html/resources/views/auth/passwords/email.blade.php" />
-        <option value="$PROJECT_DIR$/data/html/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/data/html/app/reservations.php" />
         <option value="$PROJECT_DIR$/data/html/app/commentaires.php" />
         <option value="$PROJECT_DIR$/data/html/app/clients.php" />
         <option value="$PROJECT_DIR$/data/html/database/migrations/2017_09_03_131520_create_clients_table.php" />
         <option value="$PROJECT_DIR$/data/html/database/migrations/2017_09_05_130841_create_reservations_table.php" />
         <option value="$PROJECT_DIR$/data/html/database/migrations/2017_09_04_131449_create_commentaires_table.php" />
+        <option value="$PROJECT_DIR$/data/html/app/Providers/AuthServiceProvider.php" />
+        <option value="$PROJECT_DIR$/data/html/resources/views/auth/passwords/reset.blade.php" />
+        <option value="$PROJECT_DIR$/data/html/resources/views/auth/passwords/email.blade.php" />
+        <option value="$PROJECT_DIR$/data/html/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/data/html/resources/views/auth/register.blade.php" />
       </list>
     </option>
   </component>
@@ -261,7 +231,8 @@
               <item name="restaurants-laravel.git" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="data" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Providers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="restaurants-laravel.git" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +240,6 @@
               <item name="data" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="restaurants-laravel.git" type="b2602c69:ProjectViewProjectNode" />
@@ -369,12 +339,12 @@
       <workItem from="1505202793686" duration="12234000" />
       <workItem from="1505218207637" duration="5958000" />
       <workItem from="1505287609264" duration="10376000" />
-      <workItem from="1505302785019" duration="4294000" />
+      <workItem from="1505302785019" duration="5850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56841000" />
+    <option name="totallyTimeSpent" value="58397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="0" width="1922" height="1081" extended-state="6" />
@@ -383,7 +353,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25665602" sideWeight="0.81991524" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2284345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2284345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -412,41 +382,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/html/resources/views/elements/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/resources/views/elements/admin-menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/app/Http/Controllers/Admin/clientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/app/Http/Controllers/Admin/commentaireController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="60" column="6" lean-forward="false" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/resources/views/admin/reservations/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/html/resources/views/admin/restaurants/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -613,42 +548,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/passwords/reset.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/passwords/email.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/html/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -685,14 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_03_131520_create_clients_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_04_131449_create_commentaires_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -719,8 +614,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_13_075148_rename_tables.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="627">
+          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/database/migrations/2017_09_03_131520_create_clients_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/app/Providers/BroadcastServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/app/Providers/EventServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <element signature="e#33#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/passwords/reset.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/passwords/email.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/html/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>

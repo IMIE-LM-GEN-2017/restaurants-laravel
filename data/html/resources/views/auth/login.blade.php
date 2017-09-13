@@ -1,29 +1,69 @@
-@extends('template.default')
-
-@section('title', 'Login')
+@extends('layouts.app')
 
 @section('content')
-    {!! Form::open(['route'=>'login']) !!}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
 
-    {!! Form::label('email', 'Adresse email', ['class'=>'label']) !!}
-    {!! Form::email('email', old('email'), ['required', 'autofocus', 'class'=>'input']) !!}
-    @if ($errors->has('email'))
-        <strong>{{ $errors->first('email') }}</strong>
-    @endif
+                <div class="panel-body">
+                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                        {{ csrf_field() }}
 
-    {!! Form::label('password', 'Mot de passe', ['class'=>'label']) !!}
-    {!! Form::password('password', ['required', 'autofocus', 'class'=>'input']) !!}
-    @if ($errors->has('password'))
-        <strong>{{ $errors->first('password') }}</strong>
-    @endif
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-    <label for="remember" class="label">
-        {!! Form::checkbox('remember', old('remember'), ['id'=>'remember', 'class'=>'checkbox']) !!} Se souvenir de moi
-    </label>
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
-    {!! Form::submit('Login', ['class'=>'button is-primary']) !!}
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
-    {!! Form::close() !!}
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
 
-    <a href="{{ route('password.request') }}">Vous avez oublié votre mot de passe ?</a>
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
