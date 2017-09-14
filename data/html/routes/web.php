@@ -27,17 +27,17 @@ Route::get('/', 'PagesController@home')->name('home');
 */
 /*Pages principales*/
 
-Route::get('/restaurants', 'restaurantController@index')->name('RestoIndex');
-Route::get('/restaurants/{id}', 'restaurantController@show')->name('RestoShow');
+Route::get('/restaurant', 'restaurantController@index')->name('RestoIndex');
+Route::get('/restaurant/{id}', 'restaurantController@show')->name('RestoShow');
 
-Route::get('/clients', 'clientController@index')->name('CliIndex');
-Route::get('/clients/{id}', 'clientController@show')->name('CliShow');
+Route::get('/client', 'clientController@index')->name('CliIndex');
+Route::get('/client/{id}', 'clientController@show')->name('CliShow');
 
-Route::get('/reservations', 'reservationController@index')->name('ResIndex');
-Route::get('/reservations/{id}', 'reservationController@show')->name('ResShow');
+Route::get('/reservation', 'reservationController@index')->name('ResIndex');
+Route::get('/reservation/{id}', 'reservationController@show')->name('ResShow');
 
-Route::get('/commentaires', 'commentairesController@index')->name('ComIndex');
-Route::get('/commentaires/{id}', 'commentairesController@show')->name('ComShow');
+Route::get('/commentaire', 'commentaireController@index')->name('ComIndex');
+Route::get('/commentaire/{id}', 'commentaireController@show')->name('ComShow');
 
 /*Page par restaurants*/
 
