@@ -5,8 +5,8 @@
 @section('content')
     {!! Form::model($restaurant, ['route'=>['AdminRestoUpdate', $restaurant->id]]) !!}
 
-    {!! Form::label('name') !!}
-    {!! Form::text('name') !!}
+    {!! Form::label('nom') !!}
+    {!! Form::text('nom') !!}
 
     {!! Form::label('description') !!}
     {!! Form::textarea('description') !!}

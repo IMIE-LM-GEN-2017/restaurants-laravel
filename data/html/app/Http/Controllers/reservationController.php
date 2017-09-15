@@ -9,7 +9,14 @@ use Illuminate\Http\Request;
 class reservationController extends Controller
 {
     public function index(){
-        $restaurants=reservations::all();
-        return view('reservations.index',['reservations'=>$restaurants]);
+        $reservations=reservations::all();
+        return view('reservations.index',['reservations'=>$reservations]);
+    }
+    public function show($id)
+    {
+        $reservation = reservation::findOrFail($id);
+
+        return view('reservation.show', ['reservation' => $reservation]);
+
     }
 }

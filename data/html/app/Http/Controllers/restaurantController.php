@@ -12,4 +12,11 @@ class restaurantController extends Controller
         $restaurants=restaurants::all();
         return view('restaurants.index',['restaurants'=>$restaurants]);
     }
+    public function show($id)
+    {
+        $restaurant = restaurant::findOrFail($id);
+
+        return view('restaurant.show', ['restaurant' => $restaurant]);
+
+    }
 }

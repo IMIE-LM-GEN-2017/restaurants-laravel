@@ -1,5 +1,8 @@
+@extends('templates.default')
 
+@section('title', 'Liste des membres')
 
+@section('content')
 <table class='table'>
     <thead>
     <tr>

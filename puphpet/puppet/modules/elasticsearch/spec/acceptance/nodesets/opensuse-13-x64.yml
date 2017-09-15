@@ -16,6 +16,6 @@ HOSTS:
       - echo '<busconfig><selinux></selinux></busconfig>' > /etc/selinux/targeted/contexts/dbus_contexts
       - mkdir /etc/systemd/system/sshd.service.d/
       - echo -e "[Service]\nExecStart=\nExecStart=/usr/bin/sshd -D"
-      - ln -s /usr/lib/systemd/system/sshd.service /etc/systemd/system/multi-user.target.wants/sshd.service
+      - ln -s /usr/lib/systemd/system/sshd.service /etc/systemd/system/multi-users.target.wants/sshd.service
 CONFIG:
   type: foss

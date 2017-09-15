@@ -39,7 +39,7 @@ class reservationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|string',
+            'nom' => 'required|string',
         ]);
 
         $data = $request->all();
@@ -94,7 +94,7 @@ class reservationController extends Controller
     {
         // validation des données
         $this->validate($request, [
-            'name' => 'required|string',
+            'nom' => 'required|string',
         ]);
         $reservation = reservation::findOrFail($id);
 

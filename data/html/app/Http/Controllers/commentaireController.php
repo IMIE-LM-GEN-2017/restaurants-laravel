@@ -10,6 +10,11 @@ class commentaireController extends Controller
 {
     public function index(){
         $commentaires=commentaires::all();
-        return view('commentaires.index',['commentaires'=>$commentaires]);
+        return view('commentaire.index',['commentaires'=>$commentaires]);
+    }
+    public function show($id)
+    {
+        $commentaires= clients::findOrFail($id);
+        return view('commentaire.show',['client'=> $commentaires]);
     }
 }

@@ -18,11 +18,11 @@ class CreateReservationsTable extends Migration
             // Champs
             $table->integer('restaurant_id')->unsigned();
             $table->integer('commentaire_id')->unsigned();
-            $table->integer('clients_id')->unsigned();
+            $table->integer('users_id')->unsigned();
             // Lien
             $table->foreign('restaurant_id')->references('id')->on('restaurant');
             $table->foreign('commentaire_id')->references('id')->on('commentaire');
-            $table->foreign('clients_id')->references('id')->on('clients');
+            $table->foreign('users_id')->references('id')->on('clients');
 
         });
     }

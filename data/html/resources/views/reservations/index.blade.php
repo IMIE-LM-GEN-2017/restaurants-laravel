@@ -1,17 +1,13 @@
 @extends('template.default')
 
-
-
 <html>
-
 
 <h1>Réservation</h1>
 <table>
     <thead></thead>
     <tbody>
 
-    <tr>
-
+    <>
 
         <td>
             <span>Nom</span>
@@ -45,14 +41,14 @@
             <input type="text" name="ville"/>
         </td>
 
-
         <input type="submit" value="Valider"/>
 
-
-    </tr>
+    </td>
 
     </tbody>
 
 </table>
 
 </html>
+@section('content')
+@endsection
