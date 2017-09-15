@@ -14,7 +14,7 @@ class commentaireController extends Controller
     }
     public function show($id)
     {
-        $commentaires= clients::findOrFail($id);
-        return view('commentaire.show',['client'=> $commentaires]);
+        $commentaires= users::findOrFail($id);
+        return view('commentaire.show',['users'=> $commentaires]);
     }
 }

@@ -1,5 +1,5 @@
 @extends('template.default')
-
+@section('content')
 <html>
 
 <h1>Réservation</h1>
@@ -7,7 +7,7 @@
     <thead></thead>
     <tbody>
 
-    <>
+
 
         <td>
             <span>Nom</span>
@@ -50,5 +50,5 @@
 </table>
 
 </html>
-@section('content')
+
 @endsection

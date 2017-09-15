@@ -18,10 +18,10 @@
                     <i class="fa fa-fw fa-file-text-o"></i> Clients
                 </div>
                 <div id="PostsDropdown" class="navbar-dropdown ">
-                    <a href="{{ route('AdminCliIndex') }}" class="navbar-item">
+                    <a href="{{ route('AdminUserIndex') }}" class="navbar-item">
                         <i class="fa fa-fw fa-list"></i> Liste
                     </a>
-                    <a href="{{ route('AdminCliCreate') }}" class="navbar-item">
+                    <a href="{{ route('AdminUserCreate') }}" class="navbar-item">
                         <i class="fa fa-fw fa-plus"></i> Nouveau client
                     </a>
                 </div>

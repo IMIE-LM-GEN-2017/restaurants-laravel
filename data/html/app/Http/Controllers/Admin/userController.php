@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\client;
+use App\User;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class clientController extends Controller
+class userController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class clientController extends Controller
      */
     public function index()
     {
-        $clients = client::all();
-        return view('admin.clients.index', ['clients' => $clients]);
+        $users = user::all();
+        return view('admin.users.index', ['users' => $users]);
     }
 
     /**
@@ -27,7 +27,7 @@ class clientController extends Controller
      */
     public function create()
     {
-        return view('admin.clients.create');
+        return view('admin.users.create');
     }
 
     /**
@@ -44,15 +44,15 @@ class clientController extends Controller
 
         $data = $request->all();
 
-        $client = client::create($data);
+        $user. = user::create($data);
 
         // Redirection et message
-        if ($client->exists) {
-            Session::flash('message', 'Nouvelle catégorie créée');
-            return redirect()->route('AdminCliIndex');
+        if ($user->exists) {
+            Session::flash('message', 'Nouveau client créée');
+            return redirect()->route('AdminUserIndex');
         } else {
             Session::flash('message', 'Une erreur est survenue');
-            return redirect()->route('AdminCliCreate');
+            return redirect()->route('AdminUserCreate');
         }
     }
 
@@ -64,9 +64,9 @@ class clientController extends Controller
      */
     public function show($id)
     {
-        $client = client::findOrFail($id);
+        $user = user::findOrFail($id);
 
-        return view('admin.clients.show', ['client' => $client]);
+        return view('admin.users.show', ['user' => $user]);
 
     }
 
@@ -78,9 +78,9 @@ class clientController extends Controller
      */
     public function edit($id)
     {
-        $client = client::findOrFail($id);
+        $user = user::findOrFail($id);
 
-        return view('admin.clients.edit', ['client' => $client]);
+        return view('admin.users.edit', ['user' => $user]);
     }
 
     /**
@@ -96,14 +96,14 @@ class clientController extends Controller
         $this->validate($request, [
             'nom' => 'required|string',
         ]);
-        $client = client::findOrFail($id);
+        $user = user::findOrFail($id);
 
-        if ($client->update($request->all())) {
-            Session::flash('message', 'client mise à jour');
-            return redirect()->route('AdminCliIndex');
+        if ($user->update($request->all())) {
+            Session::flash('message', 'user mise à jour');
+            return redirect()->route('AdminUserIndex');
         } else {
             Session::flash('message', 'Une erreur est survenue lors de la mise à jour');
-            return redirect()->route('AdminCliEdit', ['id' => $id]);
+            return redirect()->route('AdminUserEdit', ['id' => $id]);
         }
     }
 
@@ -115,11 +115,11 @@ class clientController extends Controller
      */
     public function destroy($id)
     {
-        $client = client::findOrFail($id);
-        $client->delete();
+        $user = user::findOrFail($id);
+        $user->delete();
 
-        Session::flash('message', 'Client supprimé');
+        Session::flash('message', 'client supprimé');
 
-        return redirect()->route('AdminCliIndex');
+        return redirect()->route('AdminUserIndex');
     }
 }
