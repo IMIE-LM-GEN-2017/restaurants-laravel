@@ -1,6 +1,6 @@
-@extends('templates.admin')
+@extends('template.default')
 
-@section('title', 'Liste des membres')
+@section('title', 'Liste des clients')
 
 @section('content')
     <table class="table">
@@ -16,16 +16,14 @@
             <td>date_de_naissance</td>
             <td>email</td>
             <td>tel</td>
-            <td>password</td>
+
         </tr>
         </thead>
         <tbody>
         @foreach($users as $user)
             <tr>
                 <td>
-                    <a href="{{route('AdminUserDestroy', ['id'=>$user->id])}}">Supprimer</a>
-                    <a href="{{route('AdminUserEdit', ['id'=>$user->id])}}">Editer</a>
-                    <a href="{{route('AdminUserShow', ['id'=>$user->id])}}">Afficher</a>
+                    <a href="{{route('UserShow', ['id'=>$user->id])}}">Afficher</a>
                 </td>
                 <td>{{$user->id}}</td>
                 <td>{{$user->nom}}</td>
@@ -36,7 +34,7 @@
                 <td>{{$user->date_de_naissance}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->tel}}</td>
-                <td>{{$user->password}}</td>
+
             </tr>
         @endforeach
         </tbody>

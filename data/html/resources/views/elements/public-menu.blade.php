@@ -17,7 +17,8 @@
         </div>e"dededcexe
 
         <div class="navbar-end">
-            @component('elements.navbar')@endcomponent
+
+                @component('elements.user-menu.blade')@endcomponent
         </div>
     </div>
 </nav>

@@ -30,7 +30,7 @@ Route::get('/restaurant', 'restaurantController@index')->name('RestoIndex');
 Route::get('/restaurant/{id}', 'restaurantController@show')->name('RestoShow');
 
 Route::get('/users', 'userController@index')->name('UserIndex');
-Route::get('/users/{id}', 'userController@show')->name('UserShow');
+Route::get('/user/{id}', 'userController@show')->name('UserShow');
 
 Route::get('/reservation', 'reservationController@index')->name('ResIndex');
 Route::get('/reservation/{id}', 'reservationController@show')->name('ResShow');

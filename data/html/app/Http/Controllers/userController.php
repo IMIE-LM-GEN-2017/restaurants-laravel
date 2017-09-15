@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 
-class UserController extends Controller
+class userController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::all();
-        return view('users.index', ['users' => $user]);
+        $users = user::all();
+        return view('users.index', ['users' => $users]);
     }
 
     /**
@@ -27,7 +27,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        return view('users.show', ['users' => $user]);
+        return view('users.show', ['user' => $user]);
 
     }
 

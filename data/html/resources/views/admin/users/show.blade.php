@@ -1,8 +1,11 @@
-@extends('template.default')
+@extends('template.admin')
 
-@section('title', 'Affichage ...')
+@section('title', $user->pseudo)
 
 @section('content')
+    <a href="{{ route('AdminUserDestroy', ['id'=>$user->id]) }}" class="button is-danger">Supprimer</a>
+    <a href="{{ route('AdminUserEdit', ['id'=>$user->id]) }}" class="button is-primary">Editer</a>
+
     <pre>
         {{var_dump($user->id)}}
         {{var_dump($user->nom)}}
@@ -14,9 +17,7 @@
         {{var_dump($user->email)}}
         {{var_dump($user->tel)}}
         {{var_dump($user->password)}}
-        {{var_dump($user->updated_at)}}
         {{var_dump($user->created_at)}}
+        {{var_dump($user->updated_at)}}
     </pre>
-    <h2 class="title">clients</h2>
-    <p>Ici, la liste des clients</p>
-@endsection
+    @endsection

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
-use App\Http\Controllers\Admin\Controller;
+use App\Http\Controllers\Admin\controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class userController extends Controller
+class userController extends controller
 {
     /**
      * Display a listing of the resource.
@@ -44,7 +44,7 @@ class userController extends Controller
 
         $data = $request->all();
 
-        $user. = user::create($data);
+        $user = user::create($data);
 
         // Redirection et message
         if ($user->exists) {
