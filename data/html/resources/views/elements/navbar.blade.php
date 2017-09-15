@@ -13,8 +13,9 @@
                 <a class="nav-link" href="{{ route('RestoIndex') }}">restaurants</a>
             </li>
             <li class="nav-item">
+                @if(Auth::guest())
                 <a class="nav-link" href="{{ route('login') }}">
-                    @if(Auth::guest())
+
                     login</a>
             </li>
             <li class="nav-item">
@@ -31,6 +32,7 @@
 
             </li>
 
+            @component('elements.user-menu')@endcomponent
 
 
 

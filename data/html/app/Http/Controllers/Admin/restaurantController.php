@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class restaurantController extends Controller
+class restaurantController extends controller
 {
     /**
      * Display a listing of the resource.

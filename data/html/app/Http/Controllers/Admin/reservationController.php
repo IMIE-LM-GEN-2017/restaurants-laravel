@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\reservation;
-use App\Http\Controllers\Admin\Controller;
+use App\Http\Controllers\Admin\controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class reservationController extends Controller
+class reservationController extends controller
 {
     /**
      * Display a listing of the resource.

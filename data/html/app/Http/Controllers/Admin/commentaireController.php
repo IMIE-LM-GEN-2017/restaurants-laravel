@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\commentaire;
-use App\Http\Controllers\Admin\Controller;
+use App\Http\Controllers\Admin\controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class commentaireController extends Controller
+class commentaireController extends controller
 {
     /**
      * Display a listing of the resource.
@@ -48,7 +48,7 @@ class commentaireController extends Controller
 
         // Redirection et message
         if ($commentaire->exists) {
-            Session::flash('message', 'Nouvelle catégorie créée');
+            Session::flash('message', 'Nouveau commentaire créée');
             return redirect()->route('AdminComIndex');
         } else {
             Session::flash('message', 'Une erreur est survenue');

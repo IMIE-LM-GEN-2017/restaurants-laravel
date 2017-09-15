@@ -1,4 +1,4 @@
-@extends('template.default')
+@extends('template.admin')
 
 @section('title', 'Liste des clients')
 

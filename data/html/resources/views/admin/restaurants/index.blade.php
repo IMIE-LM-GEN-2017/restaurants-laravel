@@ -26,10 +26,13 @@
                     <a href="{{route('AdminRestotShow', ['id'=>$restaurant->id])}}">Afficher</a>
                 </td>
                 <td>{{$restaurant->id}}</td>
-                <td>{{$restaurant->name}}</td>
+                <td>{{$restaurant->nom}}</td>
+                <td>{{$restaurant->adresse}}</td>
+                <td>{{$restaurant->cp}}</td>
+                <td>{{$restaurant->ville}}</td>
+                <td>{{$restaurant->tel}}</td>
                 <td>{{$restaurant->description}}</td>
-                <td>{{$restaurant->created_at}}</td>
-                <td>{{$restaurant->updated_at}}</td>
+                <td>{{$restaurant->dateouverture}}</td>
             </tr>
         @endforeach
         </tbody>

@@ -41,7 +41,7 @@ Route::get('/commentaire/{id}', 'commentaireController@show')->name('ComShow');
 /*Modification/Ajouts/Suppression*/
 
 Route::group(['prefix' => 'admin', 'middleware' => 'can:access-admin'], function () {
-    Route::get('/users', 'Admin\userController@index')->name('AdminUserIndex');
+    Route::get('/user', 'Admin\userController@index')->name('AdminUserIndex');
     Route::get('/users', 'Admin\userController@index')->name('AdminUserStore');
     Route::get('/users/{id}', 'Admin\userController@show')->name('AdminUsersShow');
     Route::get('/users/{id}/edit', 'Admin\userController@edit')->name('AdminUserEdit');
