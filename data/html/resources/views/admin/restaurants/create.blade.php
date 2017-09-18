@@ -6,7 +6,7 @@
     {!! Form::open(['route'=>'AdminRestoStore']) !!}
 
     {!! Form::label('restaurant') !!}
-    {!! Form::text('restaurant') !!}
+    {!! Form::text('nom') !!}
 
     {!! Form::label('adresse') !!}
     {!! Form::text('adresse') !!}
@@ -21,7 +21,7 @@
     {!! Form::text('tel') !!}
 
     {!! Form::label('date d\'ouverture') !!}
-    {!! Form::text('name') !!}
+    {!! Form::text('dateouverture') !!}
 
     {!! Form::label('description') !!}
     {!! Form::textarea('description') !!}

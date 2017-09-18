@@ -41,6 +41,9 @@ class restaurantController extends controller
     {
         $this->validate($request, [
             'nom' => 'required|string',
+            'description' => 'required|string',
+            'tel' => 'required|string',
+            'dateouverture' => 'required|date',
         ]);
 
         $data = $request->all();
