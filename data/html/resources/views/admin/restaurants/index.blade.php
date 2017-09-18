@@ -1,4 +1,4 @@
-@extends('templates.admin')
+@extends('template.admin')
 
 @section('title', 'Liste des restaurants')
 
@@ -18,12 +18,12 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($restaurant as $restaurants)
+        @foreach($restaurants as $restaurant)
             <tr>
                 <td>
-                    <a href="{{route('AdminRestotDestroy', ['id'=>$restaurant->id])}}">Supprimer</a>
-                    <a href="{{route('AdminRestotEdit', ['id'=>$restaurant->id])}}">Editer</a>
-                    <a href="{{route('AdminRestotShow', ['id'=>$restaurant->id])}}">Afficher</a>
+                    <a href="{{route('AdminRestoDestroy', ['id'=>$restaurant->id])}}">Supprimer</a>
+                    <a href="{{route('AdminRestoEdit', ['id'=>$restaurant->id])}}">Editer</a>
+                    <a href="{{route('AdminRestoShow', ['id'=>$restaurant->id])}}">Afficher</a>
                 </td>
                 <td>{{$restaurant->id}}</td>
                 <td>{{$restaurant->nom}}</td>

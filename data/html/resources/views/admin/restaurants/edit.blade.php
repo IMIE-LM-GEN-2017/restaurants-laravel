@@ -1,9 +1,9 @@
-@extends('templates.admin')
+@extends('template.default')
 
 @section('title', 'Edition d un/une restaurant)
 
 @section('content')
-    {!! Form::model($restaurant, ['route'=>['AdminRestoUpdate', $restaurant->id]]) !!}
+    {!! Form::model($restaurant, ['route'=>['RestoUpdate', $restaurant->id]]) !!}
 
     {!! Form::label('nom') !!}
     {!! Form::text('nom') !!}
@@ -13,4 +13,4 @@
 
     {!! Form::submit('Enregistrer') !!}
     {!! Form::close() !!}
-@endsection
+

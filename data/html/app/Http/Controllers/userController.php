@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 
-class userController extends Controller
+class userController extends controller
 {
     /**
      * Display a listing of the resource.

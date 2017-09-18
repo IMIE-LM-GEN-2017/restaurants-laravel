@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\restaurant;
-use App\Http\Controllers\Admin\Controller;
+
+use App\Http\Controllers\Admin\controller;
+use App\restaurants;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -16,7 +17,7 @@ class restaurantController extends controller
      */
     public function index()
     {
-        $restaurants = restaurant::all();
+        $restaurants = restaurants::all();
         return view('admin.restaurants.index', ['restaurants' => $restaurants]);
     }
 
@@ -44,7 +45,7 @@ class restaurantController extends controller
 
         $data = $request->all();
 
-        $restaurant = restaurant::create($data);
+        $restaurant = restaurants::create($data);
 
         // Redirection et message
         if ($restaurant->exists) {
@@ -64,7 +65,7 @@ class restaurantController extends controller
      */
     public function show($id)
     {
-        $restaurant = restaurant::findOrFail($id);
+        $restaurant = restaurants::findOrFail($id);
 
         return view('admin.restaurants.show', ['restaurant' => $restaurant]);
 
@@ -78,7 +79,7 @@ class restaurantController extends controller
      */
     public function edit($id)
     {
-        $restaurant = restaurant::findOrFail($id);
+        $restaurant = restaurants::findOrFail($id);
 
         return view('admin.restaurants.edit', ['restaurant' => $restaurant]);
     }
@@ -96,7 +97,7 @@ class restaurantController extends controller
         $this->validate($request, [
             'nom' => 'required|string',
         ]);
-        $restaurant = restaurant::findOrFail($id);
+        $restaurant = restaurants::findOrFail($id);
 
         if ($restaurant->update($request->all())) {
             Session::flash('message', 'restaurant mise à jour');

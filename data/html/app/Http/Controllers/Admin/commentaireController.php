@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\commentaire;
+use App\commentaires;
 use App\Http\Controllers\Admin\controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -16,7 +17,7 @@ class commentaireController extends controller
      */
     public function index()
     {
-        $commentaires = commentaire::all();
+        $commentaires = commentaires::all();
         return view('admin.commentaires.index', ['commentaires' => $commentaires]);
     }
 
@@ -44,7 +45,7 @@ class commentaireController extends controller
 
         $data = $request->all();
 
-        $commentaire = commentaire::create($data);
+        $commentaire = commentaires::create($data);
 
         // Redirection et message
         if ($commentaire->exists) {
@@ -64,7 +65,7 @@ class commentaireController extends controller
      */
     public function show($id)
     {
-        $commentaire = commentaire::findOrFail($id);
+        $commentaire = commentaires::findOrFail($id);
 
         return view('admin.commentaires.show', ['commentaire' => $commentaire]);
 
@@ -78,7 +79,7 @@ class commentaireController extends controller
      */
     public function edit($id)
     {
-        $commentaire = commentaire::findOrFail($id);
+        $commentaire = commentaires::findOrFail($id);
 
         return view('admin.commentaires.edit', ['commentaire' => $commentaire]);
     }
@@ -96,7 +97,7 @@ class commentaireController extends controller
         $this->validate($request, [
             'nom' => 'required|string',
         ]);
-        $commentaire = commentaire::findOrFail($id);
+        $commentaire = commentaires::findOrFail($id);
 
         if ($commentaire->update($request->all())) {
             Session::flash('message', 'commentaire mise à jour');
@@ -115,7 +116,7 @@ class commentaireController extends controller
      */
     public function destroy($id)
     {
-        $commentaire = commentaire::findOrFail($id);
+        $commentaire = commentaires::findOrFail($id);
         $commentaire->delete();
 
         Session::flash('message', 'commentaire supprimé');
