@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -15,7 +14,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'id', 'nom', 'prenom', 'adresse', 'ville', 'cp', 'date_de_naissance', 'email', 'tel', 'password'
+        'id',
+        'nom',
+        'prenom',
+        'adresse',
+        'ville',
+        'cp',
+        'date_de_naissance',
+        'email',
+        'tel',
+        'password'
     ];
 
     /**
@@ -24,16 +32,17 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     public function reservations()
-{
+    {
         return $this->hasMany('App\reservations');
-}
+    }
 
     public function commentaires()
-{
-    return $this->hasMany ('App\commentaires');
-}
+    {
+        return $this->hasMany('App\commentaires');
+    }
 }

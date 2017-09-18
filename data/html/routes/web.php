@@ -45,6 +45,13 @@ Route::get('/commentaire', 'commentaireController@index')->name('ComIndex');
 Route::get('/commentaire/{id}', 'commentaireController@show')->name('ComShow');
 
 /*Modification/Ajouts/Suppression*/
+Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
+    Route::post('/commentaire/save', 'commentaireController@save')->name('ComSave');
+
+    Route::get('/reservation/{id}/create', 'reservationController@create')->name('ResCreate');
+    Route::post('/reservation/save', 'reservationController@save')->name('ResSave');
+    Route::get('/reservation/list', 'reservationController@mylist')->name('ResMyList');
+});
 
 Route::group(['prefix' => 'admin', 'middleware' => 'can:access-admin'], function () {
     Route::get('/user', 'Admin\userController@index')->name('AdminUserIndex');

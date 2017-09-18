@@ -4,7 +4,7 @@
 
 @section('content')
 
-
+    <a href="{{route('ResCreate', ['id'=>$restaurants->id])}}">Réserver maintenant</a>
     <pre>
         {{var_dump($restaurants->id)}}
         {{var_dump($restaurants->nom)}}
@@ -19,13 +19,20 @@
     </pre>
 
 
-    {!! Form::open(['route'=>['ComUpdate',$commentaire->id]]) !!}
-    {!! Form::label('nom') !!}
-    {!! Form::text('nom') !!}
+    {!! Form::open(['route'=>'ComSave']) !!}
 
     {!! Form::label('commentaire') !!}
     {!! Form::textarea('commentaire') !!}
 
+    {!! Form::label('Note /5') !!}
+    {!! Form::text('note') !!}
+    {!! Form::hidden('restaurant_id', $restaurants->id) !!}
+
     {!! Form::submit('Enregistrer') !!}
     {!! Form::close() !!}
+
+    <h2>Commentaires</h2>
+    {{--@foreach($restaurants->reservations as $res)--}}
+        {{--{{var_dump($res)}}--}}
+    {{--@endforeach--}}
 @endsection
