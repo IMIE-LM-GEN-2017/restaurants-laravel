@@ -4,8 +4,10 @@
 @else
     <div class="navbar-item has-dropdown is-hoverable">
         <div class="navbar-link"><i class="fa fa-fw fa-user"></i> {{ auth()->user()->pseudo }}</div>
-        <div id="CatsDropdown" class="navbar-dropdown is-right">
-            <a class="navbar-item" href="{{ route('AdminCatIndex') }}">
+
+        <div id="UserDropdown" class="navbar-dropdown is-right">
+            <a class="navbar-item" href="{{ route('AdminUserIndex') }}">
+
                 <i class="fa fa-fw fa-cogs"></i> Administration
             </a>
             <a class="navbar-item" href="{{ route('AdminUserDashboard') }}">
@@ -20,6 +22,7 @@
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                   style="display: none;">{{ csrf_field() }}</form>
+
         </div>
     </div>
 @endif

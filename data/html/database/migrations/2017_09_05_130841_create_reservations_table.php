@@ -23,7 +23,6 @@ class CreateReservationsTable extends Migration
             $table->foreign('restaurant_id')->references('id')->on('restaurant');
             $table->foreign('commentaire_id')->references('id')->on('commentaire');
             $table->foreign('clients_id')->references('id')->on('clients');
-
         });
     }
 

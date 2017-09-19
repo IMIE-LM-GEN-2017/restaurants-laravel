@@ -11,13 +11,16 @@
     <div id="navMenubd" class="navbar-menu">
         <div class="navbar-start">
             <a class="navbar-item" href="{{ route('ComIndex') }}"><i class="fa fa-fw fa-file-text-o"></i> Commentaires</a>
-            <a class="navbar-item" href="{{ route('CliIndex') }}"><i class="fa fa-fw fa-users"></i> Clients</a>
+
+            <a class="navbar-item" href="{{ route('UserIndex') }}"><i class="fa fa-fw fa-users"></i> Clients</a>
             <a class="navbar-item" href="{{ route('ResIndex') }}"><i class="fa fa-fw fa-book"></i> Reservation</a>
             <a class="navbar-item" href="{{ route('RestoIndex') }}"><i class="fa fa-fw fa-tags"></i> Restaurants</a>
-        </div>
+        </div>e"dededcexe
 
         <div class="navbar-end">
-            @component('elements.user-menu')@endcomponent
+
+                @component('elements.user-menu.blade')@endcomponent
+
         </div>
     </div>
 </nav>

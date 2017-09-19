@@ -18,12 +18,7 @@
                     <i class="fa fa-fw fa-file-text-o"></i> Clients
                 </div>
                 <div id="PostsDropdown" class="navbar-dropdown ">
-                    <a href="{{ route('AdminCliIndex') }}" class="navbar-item">
-                        <i class="fa fa-fw fa-list"></i> Liste
-                    </a>
-                    <a href="{{ route('AdminCliCreate') }}" class="navbar-item">
-                        <i class="fa fa-fw fa-plus"></i> Nouveau client
-                    </a>
+
                 </div>
             </div>
 
@@ -48,10 +43,7 @@
                     <i class="fa fa-fw fa-tags"></i> Commentaires
                 </div>
                 <div id="PostsDropdown" class="navbar-dropdown ">
-                    <a href="{{ route('AdminTagIndex') }}" class="navbar-item">
-                        <i class="fa fa-fw fa-list"></i> Liste
-                    </a>
-                    <a href="{{ route('AdminTagCreate') }}" class="navbar-item">
+
                         <i class="fa fa-fw fa-plus"></i> Nouveau commentaire
                     </a>
                 </div>

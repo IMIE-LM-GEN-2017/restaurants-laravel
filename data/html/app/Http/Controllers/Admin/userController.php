@@ -25,10 +25,12 @@ class userController extends controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         return view('admin.users.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -44,6 +46,7 @@ class userController extends controller
 
         $data = $request->all();
 
+
         $user = user::create($data);
 
         // Redirection et message
@@ -54,6 +57,7 @@ class userController extends controller
             Session::flash('message', 'Une erreur est survenue');
             return redirect()->route('AdminUserCreate');
         }
+
     }
 
     /**

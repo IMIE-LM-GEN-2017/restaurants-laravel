@@ -1,0 +1,36 @@
+p{
+    font-size: 20px;
+
+}
+
+
+
+
+html { overflow-y: scroll; }
+
+body { font-family: Gabriola, "Gentium Basic", Georgia;
+    font-size: 20px;
+    background-color: dimgray;
+
+
+}
+}
+
+head {
+    font-family: Gabriola, "Gentium Basic", Georgia;
+}
+
+
+.titre{
+    font-size: 70px;
+}
+
+.coordonees{
+    width:1885px;
+    height:400px;
+    background-color:lightcyan;
+    text-align:center;
+    moz-border-radius:50px;
+    webkit-border-radius:50px;
+    border-radius:50px;"
+}

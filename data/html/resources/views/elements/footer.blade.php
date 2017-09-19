@@ -1,4 +1,3 @@
-<div class=" row footer">
 
 <div id="Footer">
 
@@ -7,4 +6,4 @@
     <a href="#" title="Plan du Site">Plan du Site</a>
 
 </div>
-</div>
+

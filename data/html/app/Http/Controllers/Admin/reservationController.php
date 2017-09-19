@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\reservation;
+
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class reservationController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -39,7 +41,9 @@ class reservationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+
             'name' => 'required|string',
+
         ]);
 
         $data = $request->all();
@@ -94,7 +98,9 @@ class reservationController extends Controller
     {
         // validation des données
         $this->validate($request, [
+
             'name' => 'required|string',
+
         ]);
         $reservation = reservation::findOrFail($id);
 

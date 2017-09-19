@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\commentaire;
+
+
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class commentaireController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +19,9 @@ class commentaireController extends Controller
      */
     public function index()
     {
+
         $commentaires = commentaire::all();
+
         return view('admin.commentaires.index', ['commentaires' => $commentaires]);
     }
 
@@ -39,16 +44,20 @@ class commentaireController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+
             'name' => 'required|string',
+
         ]);
 
         $data = $request->all();
 
-        $commentaire = commentaire::create($data);
+
+        $commentaire = commentaires::create($data);
 
         // Redirection et message
         if ($commentaire->exists) {
-            Session::flash('message', 'Nouvelle catégorie créée');
+            Session::flash('message', 'Nouveau commentaire créée');
+
             return redirect()->route('AdminComIndex');
         } else {
             Session::flash('message', 'Une erreur est survenue');
@@ -64,7 +73,10 @@ class commentaireController extends Controller
      */
     public function show($id)
     {
+
+
         $commentaire = commentaire::findOrFail($id);
+
 
         return view('admin.commentaires.show', ['commentaire' => $commentaire]);
 
@@ -78,7 +90,9 @@ class commentaireController extends Controller
      */
     public function edit($id)
     {
+
         $commentaire = commentaire::findOrFail($id);
+
 
         return view('admin.commentaires.edit', ['commentaire' => $commentaire]);
     }
@@ -94,9 +108,11 @@ class commentaireController extends Controller
     {
         // validation des données
         $this->validate($request, [
+
             'name' => 'required|string',
         ]);
         $commentaire = commentaire::findOrFail($id);
+
 
         if ($commentaire->update($request->all())) {
             Session::flash('message', 'commentaire mise à jour');
@@ -115,7 +131,9 @@ class commentaireController extends Controller
      */
     public function destroy($id)
     {
+
         $commentaire = commentaire::findOrFail($id);
+
         $commentaire->delete();
 
         Session::flash('message', 'commentaire supprimé');
