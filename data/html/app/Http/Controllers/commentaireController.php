@@ -10,6 +10,7 @@ class commentaireController extends Controller
 {
     public function index(){
         $commentaires=commentaires::all();
+
         return view('commentaire.index',['commentaires'=>$commentaires]);
     }
     public function show($id)
@@ -32,6 +33,7 @@ class commentaireController extends Controller
         commentaires::create($data);
 
         return redirect()->route('RestoShow', ['id'=>$data['restaurant_id']]);
+
 
     }
 }

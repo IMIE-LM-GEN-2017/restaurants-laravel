@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\Http\Controllers\Admin\controller;
 use App\restaurants;
+use App\Http\Controllers\Admin\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class restaurantController extends controller
+class restaurantController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +18,9 @@ class restaurantController extends controller
      */
     public function index()
     {
+
         $restaurants = restaurants::all();
+
         return view('admin.restaurants.index', ['restaurants' => $restaurants]);
     }
 
@@ -40,15 +43,18 @@ class restaurantController extends controller
     public function store(Request $request)
     {
         $this->validate($request, [
+
             'nom' => 'required|string',
             'description' => 'required|string',
             'tel' => 'required|string',
             'dateouverture' => 'required|date',
-        ]);
 
+]);
         $data = $request->all();
 
+
         $restaurant = restaurants::create($data);
+
 
         // Redirection et message
         if ($restaurant->exists) {
@@ -68,7 +74,9 @@ class restaurantController extends controller
      */
     public function show($id)
     {
+
         $restaurant = restaurants::findOrFail($id);
+
 
         return view('admin.restaurants.show', ['restaurant' => $restaurant]);
 
@@ -82,7 +90,9 @@ class restaurantController extends controller
      */
     public function edit($id)
     {
+
         $restaurant = restaurants::findOrFail($id);
+
 
         return view('admin.restaurants.edit', ['restaurant' => $restaurant]);
     }
@@ -98,9 +108,11 @@ class restaurantController extends controller
     {
         // validation des données
         $this->validate($request, [
+
             'nom' => 'required|string',
         ]);
         $restaurant = restaurants::findOrFail($id);
+
 
         if ($restaurant->update($request->all())) {
             Session::flash('message', 'restaurant mise à jour');
@@ -119,7 +131,7 @@ class restaurantController extends controller
      */
     public function destroy($id)
     {
-        $restaurant = restaurant::findOrFail($id);
+        $restaurant = restaurants::findOrFail($id);
         $restaurant->delete();
 
         Session::flash('message', 'restaurant supprimé');

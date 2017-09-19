@@ -1,6 +1,9 @@
-<div class=" row footer">
 
-    <div class=" text-center col-md-4">contact</div>
-    <div class=" text-center col-md-4">Mentions légales</div>
-    <div class=" text-center col-md-4">Un truc</div>
+<div id="Footer">
+
+    <a href="#" title="Contact">Contact</a>
+    <a href="#" title="Mentions Légales">Mentions Légales</a>
+    <a href="#" title="Plan du Site">Plan du Site</a>
+
 </div>
+

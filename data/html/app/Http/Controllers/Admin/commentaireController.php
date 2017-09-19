@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\commentaire;
-use App\commentaires;
-use App\Http\Controllers\Admin\controller;
+
+
+use App\Http\Controllers\Admin\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class commentaireController extends controller
+class commentaireController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +19,9 @@ class commentaireController extends controller
      */
     public function index()
     {
-        $commentaires = commentaires::all();
+
+        $commentaires = commentaire::all();
+
         return view('admin.commentaires.index', ['commentaires' => $commentaires]);
     }
 
@@ -40,16 +44,20 @@ class commentaireController extends controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'nom' => 'required|string',
+
+            'name' => 'required|string',
+
         ]);
 
         $data = $request->all();
+
 
         $commentaire = commentaires::create($data);
 
         // Redirection et message
         if ($commentaire->exists) {
             Session::flash('message', 'Nouveau commentaire créée');
+
             return redirect()->route('AdminComIndex');
         } else {
             Session::flash('message', 'Une erreur est survenue');
@@ -65,7 +73,10 @@ class commentaireController extends controller
      */
     public function show($id)
     {
-        $commentaire = commentaires::findOrFail($id);
+
+
+        $commentaire = commentaire::findOrFail($id);
+
 
         return view('admin.commentaires.show', ['commentaire' => $commentaire]);
 
@@ -79,7 +90,9 @@ class commentaireController extends controller
      */
     public function edit($id)
     {
-        $commentaire = commentaires::findOrFail($id);
+
+        $commentaire = commentaire::findOrFail($id);
+
 
         return view('admin.commentaires.edit', ['commentaire' => $commentaire]);
     }
@@ -95,9 +108,11 @@ class commentaireController extends controller
     {
         // validation des données
         $this->validate($request, [
-            'nom' => 'required|string',
+
+            'name' => 'required|string',
         ]);
-        $commentaire = commentaires::findOrFail($id);
+        $commentaire = commentaire::findOrFail($id);
+
 
         if ($commentaire->update($request->all())) {
             Session::flash('message', 'commentaire mise à jour');
@@ -116,7 +131,9 @@ class commentaireController extends controller
      */
     public function destroy($id)
     {
-        $commentaire = commentaires::findOrFail($id);
+
+        $commentaire = commentaire::findOrFail($id);
+
         $commentaire->delete();
 
         Session::flash('message', 'commentaire supprimé');

@@ -25,7 +25,9 @@
                 <td>
                     <a href="{{route('AdminUserDestroy', ['id'=>$user->id])}}">Supprimer</a>
                     <a href="{{route('AdminUserEdit', ['id'=>$user->id])}}">Editer</a>
+
                     <a href="{{route('AdminUsersShow', ['id'=>$user->id])}}">Afficher</a>
+
                 </td>
                 <td>{{$user->id}}</td>
                 <td>{{$user->nom}}</td>

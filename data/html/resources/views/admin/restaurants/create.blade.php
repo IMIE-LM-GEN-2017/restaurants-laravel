@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('template.admin')
+=======
+@extends('templates.admin')
+>>>>>>> master
 
 @section('title', 'Nouveau restaurant')
 
@@ -22,6 +26,7 @@
 
     {!! Form::label('date d\'ouverture') !!}
     {!! Form::text('dateouverture') !!}
+
 
     {!! Form::label('description') !!}
     {!! Form::textarea('description') !!}

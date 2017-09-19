@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 
 use App\reservations;
+
 use App\restaurants;
+
+
 use Illuminate\Http\Request;
 
 class reservationController extends Controller
 {
+
     public function index()
     {
         $reservations = reservations::all();
@@ -53,5 +57,6 @@ class reservationController extends Controller
 
 
         return view('reservations.mylist', ['reservations' => $resas]);
+
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class reservations extends Model
 {
+
     protected $fillable = ['id', 'restaurant_id','commentaire_id', 'users_id', 'date', 'nb_personnes'];
 
     public function users(){
@@ -18,4 +19,5 @@ class reservations extends Model
     public function restaurants(){
         return $this->belongsTo('App\restaurants', 'restaurant_id');
     }
+
 }

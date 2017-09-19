@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\reservation;
-
+use App\client;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class reservationController extends Controller
-
+class clientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +16,8 @@ class reservationController extends Controller
      */
     public function index()
     {
-        $reservations = reservation::all();
-        return view('admin.reservations.index', ['reservations' => $reservations]);
+        $clients = client::all();
+        return view('admin.clients.index', ['clients' => $clients]);
     }
 
     /**
@@ -29,7 +27,7 @@ class reservationController extends Controller
      */
     public function create()
     {
-        return view('admin.reservations.create');
+        return view('admin.clients.create');
     }
 
     /**
@@ -41,22 +39,20 @@ class reservationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-
             'name' => 'required|string',
-
         ]);
 
         $data = $request->all();
 
-        $reservation = reservation::create($data);
+        $client = client::create($data);
 
         // Redirection et message
-        if ($reservation->exists) {
+        if ($client->exists) {
             Session::flash('message', 'Nouvelle catégorie créée');
-            return redirect()->route('AdminResIndex');
+            return redirect()->route('AdminCliIndex');
         } else {
             Session::flash('message', 'Une erreur est survenue');
-            return redirect()->route('AdminResCreate');
+            return redirect()->route('AdminCliCreate');
         }
     }
 
@@ -68,9 +64,9 @@ class reservationController extends Controller
      */
     public function show($id)
     {
-        $reservation = reservation::findOrFail($id);
+        $client = client::findOrFail($id);
 
-        return view('admin.reservations.show', ['reservation' => $reservation]);
+        return view('admin.clients.show', ['client' => $client]);
 
     }
 
@@ -82,9 +78,9 @@ class reservationController extends Controller
      */
     public function edit($id)
     {
-        $reservation = reservation::findOrFail($id);
+        $client = client::findOrFail($id);
 
-        return view('admin.reservations.edit', ['reservation' => $reservation]);
+        return view('admin.clients.edit', ['client' => $client]);
     }
 
     /**
@@ -98,18 +94,16 @@ class reservationController extends Controller
     {
         // validation des données
         $this->validate($request, [
-
             'name' => 'required|string',
-
         ]);
-        $reservation = reservation::findOrFail($id);
+        $client = client::findOrFail($id);
 
-        if ($reservation->update($request->all())) {
-            Session::flash('message', 'reservation mise à jour');
-            return redirect()->route('AdminResIndex');
+        if ($client->update($request->all())) {
+            Session::flash('message', 'client mise à jour');
+            return redirect()->route('AdminCliIndex');
         } else {
             Session::flash('message', 'Une erreur est survenue lors de la mise à jour');
-            return redirect()->route('AdminResEdit', ['id' => $id]);
+            return redirect()->route('AdminCliEdit', ['id' => $id]);
         }
     }
 
@@ -121,11 +115,11 @@ class reservationController extends Controller
      */
     public function destroy($id)
     {
-        $reservation = reservation::findOrFail($id);
-        $reservation->delete();
+        $client = client::findOrFail($id);
+        $client->delete();
 
-        Session::flash('message', 'reservation supprimé');
+        Session::flash('message', 'Client supprimé');
 
-        return redirect()->route('AdminResIndex');
+        return redirect()->route('AdminCliIndex');
     }
 }

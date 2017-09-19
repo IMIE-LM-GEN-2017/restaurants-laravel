@@ -35,4 +35,10 @@
         @endforeach
         </tbody>
 
+    </table>
+
+    <a class="btn btn-dark" href="{{ route('ComIndex') }}" role="button">Laissez votre avis!</a>
+
+    <a class="btn btn-dark" href="{{ route('ResIndex') }}" role="button">Reservez!</a>
 @endsection
+
