@@ -20,6 +20,7 @@ class CreateRestaurantsTable extends Migration
             $table->integer('cp')->nullable();
             $table->string('ville')->nullable();
             $table->string('tel');
+            $table->string('horaire')->nullable();
             $table->string('description');
             $table->date('dateouverture');
             $table->timestamps();

@@ -49,7 +49,7 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     Route::post('/commentaire/save', 'commentaireController@save')->name('ComSave');
 
     Route::get('/reservation/{id}/create', 'reservationController@create')->name('ResCreate');
-    Route::post('/reservation/save', 'reservationController@save')->name('ResSave');
+    Route::get('/reservation/save', 'reservationController@save')->name('ResSave');
     Route::get('/reservation/list', 'reservationController@mylist')->name('ResMyList');
 });
 
